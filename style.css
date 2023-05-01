@@ -1,0 +1,399 @@
+@import url(https://fonts.google.com/specimen/Ubuntu);
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+:root{
+    --color1:hsl(213, 96%, 18%);
+    --color2:hsl(243, 100%, 62%);
+    --color3:hsl(228, 100%, 84%);
+    --color4: hsl(206, 94%, 87%);
+    --color5:hsl(354, 84%, 57%);
+    --color6: hsl(231, 11%, 63%);
+    --color7: hsl(229, 24%, 87%);
+    --color8: hsl(217, 100%, 97%);
+    --color9: hsl(231, 100%, 99%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu",sans-serif;
+    font-weight: 100;
+
+}
+body{
+    height: 100vh;
+}
+.container{
+    width: 70%;
+    display: flex;
+    height: 65vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 0 10px 0 rgb(223, 222, 222);
+    transform: translate(-50%,-50%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 10px;
+}
+/* side bar//////////////////// */
+.container .side-bar{
+    width: 30%;
+    height: 63vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    background-size: cover;
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    margin: 0 !important;
+
+}
+.container .side-bar .steps{
+    display: flex;
+    justify-content: flex-start;
+    padding: 25px;
+    align-items: center;
+    height: 5vh;
+    color: hsl(0, 0%, 100%);
+    margin: 10px;
+    width: 100%;
+    text-transform: uppercase;
+}
+.step-num{
+    border-radius: 100%;
+    border: 1px solid hsl(0, 0%, 100%);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-num{
+    background-color: var(--color4);
+    color: black;
+}
+
+
+.step-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    margin-left: 15px;
+}
+.step-name p{
+    font-size: 13px;
+    opacity: 0.7;
+    font-size: 11px;
+    font-weight: 100;
+}
+.step-name h4{
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.87;
+    letter-spacing: 1px;
+}
+/* end side bar//////////////////// */
+
+
+/* right side */
+.right-side{
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    width: 70%;
+}
+/* content */
+.content{
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+.page{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: column;
+    text-transform: capitalize;
+    height: 100%;
+    padding: 0 0 0 15%;
+}
+/* first form */
+.first{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: column;
+    text-transform: capitalize;
+    height: 100%;
+    padding: 0 0 0 15%;
+}
+.header h1{
+    color: var(--color1);
+    font-weight: 700;
+}
+.header p{
+    opacity: 0.72;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    text-transform: none;
+}
+.first .input{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.first .input .labels{
+    display: flex;
+    justify-content: space-between;
+}
+.first .input .labels .error-field{
+    color: var(--color5);
+    font-weight: 700;
+}
+.first .input label{
+    color: var(--color1);
+    font-weight: 300;
+    padding: 2px;
+}
+.first .input input{
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+    margin: 5px;
+    width: 100%;
+}
+.first .input input::placeholder{
+    font-weight: 300;
+    font-size: 15px;
+}
+/* end first form */
+
+/* start second page */
+.second .selections{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+.second .arcade,
+.second .advanced,
+.second .pro{
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 19vh;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+.checked-pick{
+    background-color: var(--color8);
+}
+input[type = "radio"]:checked{
+    background-color: var(--color8);
+    accent-color: red;
+}
+.selections .pirces{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.selections h4{
+    color: var(--color1);
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.selections p{
+    color: var(--color6);
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+
+
+.check-box{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color8);
+    padding: 15px;
+}
+.check-box label{
+    margin: 0 5% 0 5%;
+    color: var(--color6);
+    font-weight: 700;
+}
+.check-box input{
+    -webkit-appearance: none;
+    position: relative;
+    width: 10%;
+    border-radius: 25px;
+    background-color: var(--color1);
+    outline: none;
+    cursor: pointer;
+}
+.check-box input:checked ~ .yy{
+    color: var(--color1);
+}
+.check-box input::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 1em;
+    height: 1em;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: white;
+    transition: all 0.5s;
+}
+.check-box input:checked::after{
+    left: 75%;
+}
+.freeMon{
+    color: hsl(213, 96%, 18%) !important;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: lowercase;
+    padding-top: 10px;
+    display: none;
+}
+/* end second page */
+
+
+/* third page */
+
+    .picks{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .picks .pick-child{
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid hsl(228, 100%, 84%);
+        padding: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .picks .input-container{
+        display: flex;
+        width: 80%;
+    }
+    .picks .input-container .pick-one{
+        width: 17px;
+        height: 17px;
+        accent-color: var(--color2);
+        margin-top: 10px;
+        border-radius: 15px;
+        margin-right: 20px;
+    }
+    .picks .input-container .pick-one:checked{
+        accent-color: var(--color2);
+        background-color: var(--color8);
+    }
+    .picks .input-container .pick-one:checked:hover{
+        accent-color: var(--color2);
+        padding-left: 100px;
+    }
+    .picks-h1 h4{
+        color: var(--color1);
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+    .pick-child p{
+        color: var(--color2);
+        font-weight: 700;
+        text-transform: lowercase;
+    }
+    .picks-h1 p{
+        color: var(--color6);
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+/* end third page*/
+
+/* start fourth page */
+.four-container{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+}
+.inputs-val-cont{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 85%;
+    background-color: hsl(231, 100%, 99%);
+}
+.type{
+    height: 35%;
+}
+hr{
+    opacity: 0.5;
+}
+.one1,
+.one2{
+    height: 25%;
+}
+
+/* end fourth page */
+
+/* end content */
+/* btns */
+
+.btns{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns #back{
+    left: 35%;
+    background-color: transparent;
+    color: hsl(231, 11%, 63%);
+    transition: all 0.5s ease;
+
+}
+.btns #back:hover{
+    color: var(--color1);
+}
+.btns #next{
+    right: 5%;
+    background-color: var(--color1);
+    color: hsl(0, 0%, 100%);
+    transition: all 0.5s ease;
+}
+.btns #next:hover{
+    opacity: 0.5;
+}
+.btns #back,
+.btns #next{
+    position: fixed;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* end btns */
+/*end  right side */
